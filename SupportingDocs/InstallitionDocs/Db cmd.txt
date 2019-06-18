@@ -1,0 +1,13 @@
+DDL => create alter rename drop truncate
+ create database test;
+ use db;
+ show tables;
+ desc my_table;
+ rename table test to employee;
+ alter table test add column JOB_DEPT varchar(255);
+ DROP table test;
+
+DML => insert update delete
+ insert into employee values(2,'substain',10000,'DEVELOPER','I.T');
+ insert into employee (ID,NAME,SALARY,JOB_DESC,JOB_DEPT) values (3,'RIYA',10000,'TESTER','I.T');
+
