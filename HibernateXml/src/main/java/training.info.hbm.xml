@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<hibernate-mapping>
+	<class name="com.tyss.hibernate.xml.dto.TrainingInfoBean"
+		table="TRAINING_INFO">
+		<id name="courseId" type="int">
+			<column name="COURCE_ID"></column>
+		</id>
+		<property name="CourseName" type="string">
+			<column name="COURCE_NAME"></column>
+		</property>
+
+		<property name="duration" type="string">
+			<column name="DURATION"></column>
+		</property>
+
+		<property name="courseType" type="string">
+			<column name="COURCE_TYPE"></column>
+		</property>
+	</class>
+</hibernate-mapping>
