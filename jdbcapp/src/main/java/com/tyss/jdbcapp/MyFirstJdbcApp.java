@@ -13,14 +13,7 @@ import lombok.extern.java.Log;
 public final class MyFirstJdbcApp {
 	public static void main(String[] args) throws SQLException, ClassNotFoundException {
 		String sql = "select * from emp_information" + " where id=1";
-		/*
-		 * Driver driver=new Driver(); DriverManager.deregisterDriver(driver);
-		 * 
-		 * try { Class.forName("com.mysql.jdbc.Driver").newInstance(); } catch
-		 * (InstantiationException | IllegalAccessException e1) { // TODO Auto-generated
-		 * catch block e1.printStackTrace(); }
-		 */
-
+	
 		try (java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tyss_db", "root",
 				"root"); PreparedStatement pstmt = con.prepareStatement(sql); ResultSet rs = pstmt.executeQuery();) {
 

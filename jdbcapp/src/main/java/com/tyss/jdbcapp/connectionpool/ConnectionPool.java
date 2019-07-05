@@ -13,12 +13,6 @@ import com.tyss.jdbcapp.PropertyUtil;
 
 public class ConnectionPool {
 
-	/*
-	 * private static final String JDBC_DB_URL = "jdbc:mysql://localhost:3306/db";
-	 * private static final String JDBC_USER = "root"; private static final String
-	 * JDBC_PASS = "root"; private static final int POOL_SIZE = 10;
-	 */
-
 	private static ConnectionPool poolRef = null;
 	Connection con = null;
 	private String url;

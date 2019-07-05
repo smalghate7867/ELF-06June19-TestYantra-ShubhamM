@@ -17,13 +17,13 @@ public class GetEmpInfoPreparedStmt {
 
 	public static void main(String[] args) {
 
-		String sql = "select * from emp_information where id=1";
+		String sql = "select * from emp_information where id=?";
 		try {
 			pool=ConnectionPoolTest.getConnectionPoolTest();
 			con=pool.getConnectionFromPool();
 
 			PreparedStatement pstmt = con.prepareStatement(sql);
-
+pstmt.setInt(1, 1);
 			ResultSet rs = pstmt.executeQuery();
 			while (rs.next()) {
 				log.info("" + rs.getInt(1));
