@@ -1,13 +1,11 @@
-package com.tyss.hibernateapp.dto;
+package com.tyss.designpattern.beans;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -18,7 +16,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "emp_info ")
+@Table(name = "emp_information ")
 public class EmployeeInfoBean implements Serializable {
 	@Id
 	@Column(name = "ID")

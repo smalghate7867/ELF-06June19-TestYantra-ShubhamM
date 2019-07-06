@@ -11,14 +11,14 @@ import com.tyss.hibernate.xml.dto.TrainingInfoBean;
  * Hello world!
  *
  */
-public class SaveRecord {
+public class UpdateRecord {
 	public static void main(String[] args) {
 		
 		TrainingInfoBean trainBean=new TrainingInfoBean();
-		trainBean.setCourseId(3);
-		trainBean.setCourseName("SPRING");
+		trainBean.setCourseId(1);
+		trainBean.setCourseName("JAVA");
 		trainBean.setCourseType("Regular");
-		trainBean.setDuration("6 Month");
+		trainBean.setDuration("3 Month");
 		
 		Configuration cfg=new Configuration();
 		cfg.configure("hibernate.cfg.xml");
