@@ -4,20 +4,23 @@ import java.util.List;
 
 import org.hibernate.Criteria;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 
 import com.tyss.designpattern.beans.EmployeeInfoBean;
 
+import lombok.extern.java.Log;
+@Log
 public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 
 	@Override
 	public List<EmployeeInfoBean> getAllEmployeeInfo() {
 		//SessionFactory sesFact = SessionFactoryUtil.getSession();
 		Session session = SessionFactoryUtil.openSession();
-		Criteria criteria = session.createCriteria(EmployeeInfoBean.class);
-		List employees = criteria.list();
-		return employees;
+		
+		Query query =session.createQuery("from EmployeeInfoBean");
+		List list=query.list();
+	
+		return list;
 	}
 
 	@Override

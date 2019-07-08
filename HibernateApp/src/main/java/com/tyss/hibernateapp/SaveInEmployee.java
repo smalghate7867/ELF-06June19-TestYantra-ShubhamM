@@ -23,10 +23,10 @@ public class SaveInEmployee {
 
 		Transaction tr = session.beginTransaction();
 		EmployeeInfoBean emp1 = new EmployeeInfoBean();
-		emp1.setId(4);
-		emp1.setName("Aish");
+		emp1.setId(5);
+		emp1.setName("Roy");
 		emp1.setAge(22);
-		emp1.setGender("Female");
+		emp1.setGender("female");
 		emp1.setSalary(1000000);
 		emp1.setPhone(1234567890);
 		emp1.setJoiningDate(new Date(2019, 06, 12));

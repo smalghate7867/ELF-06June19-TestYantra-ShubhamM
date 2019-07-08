@@ -10,7 +10,7 @@ public class EmployeeDAOFactory {
 		if (dbinstanceType.equals("jdbc")) {
 			return dao = new EmployeeDAOJDBCImpl();
 		} else if (dbinstanceType.equals("Hibernate")) {
-			return dao = new EmployeeDAOHibernateImpl2();
+			return dao = new EmployeeDAOHibernateImpl();
 		}
 		
 		return dao;
